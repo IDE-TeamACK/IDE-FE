@@ -1,4 +1,8 @@
-export default function MyPage() {
+"use client";
+
+import * as Entities from "@/entities";
+
+function MyPage() {
   return (
     <div>
       <p className="flex items-center justify-center p-12">
@@ -7,3 +11,5 @@ export default function MyPage() {
     </div>
   );
 }
+
+export default Entities.Auth.withAuth(MyPage);
